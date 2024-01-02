@@ -1,0 +1,49 @@
+.switch {
+  margin-left: 15px;
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  display: none;
+}
+
+.slider {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--text);
+  border-radius: 34px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.slider:before {
+  /* Icon related */
+  content: "\f5a1";
+  font-family: bootstrap-icons !important;
+  font-style: normal;
+  font-weight: 400 !important;
+  text-align: center;
+  vertical-align: text-top;
+  color: var(--bg);
+
+  /* Slider related  */
+  position: absolute;
+  height: 23px;
+  width: 23px;
+  left: 4px;
+  bottom: 4px;
+  transition: 0.3s;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+  content: "\f494";
+}
